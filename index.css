@@ -249,6 +249,18 @@ main section.our-business {
   position: relative;
   padding-top: 230px;
 }
+main section.our-business::after {
+  content: "";
+  position: absolute;
+  top: 360px;
+  left: 0;
+  width: 100%;
+  height: 883px;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-image: url(./images/top_business_border.svg);
+  background-position: top center;
+}
 main section.our-business .title {
   color: #0E5DA8;
 }
@@ -298,13 +310,6 @@ main section.our-business .content-wrap .content:hover button.circle-btn {
 }
 main section.our-business .content-wrap .content:hover button.circle-btn svg path {
   stroke: #fff;
-}
-main section.our-business .bg {
-  position: absolute;
-  top: 230px;
-  left: 0;
-  width: 100%;
-  z-index: -1;
 }
 main section.service-and-technology {
   padding-top: 235px;
