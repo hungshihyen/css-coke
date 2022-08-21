@@ -137,29 +137,30 @@ header nav .header-btn-group .btn-search {
 main {
   overflow: hidden;
 }
-main section {
+
+section {
   width: 100%;
 }
-main section.bg {
+section.greeting {
   position: relative;
-  height: 110vh;
+  height: 100vh;
   background-color: #0b5092;
   background-image: url(./images/top_wave.png), url(./images/top_mv.jpg);
   background-size: 100% auto;
   background-repeat: no-repeat;
   background-position: 0 200px, top center;
 }
-main section.bg > div {
+section.greeting > article {
   position: absolute;
-  top: 50%;
+  bottom: 100px;
   right: 0;
   width: 35%;
 }
-main section.bg .slogan {
+section.greeting .slogan {
   margin-left: 50px;
   width: 65%;
 }
-main section.bg .news-container {
+section.greeting .news-container {
   padding: 18px 160px 18px 32px;
   margin-top: 100px;
   display: flex;
@@ -168,12 +169,12 @@ main section.bg .news-container {
   border-radius: 50px 0 0 50px;
   background-color: #fff;
 }
-main section.bg .news-container ul {
+section.greeting .news-container ul {
   position: relative;
   width: 90%;
   margin-right: 20px;
 }
-main section.bg .news-container ul li {
+section.greeting .news-container ul li {
   position: absolute;
   width: 100%;
   display: flex;
@@ -184,27 +185,27 @@ main section.bg .news-container ul li {
           animation: news 5s ease-in-out alternate infinite;
   opacity: 0;
 }
-main section.bg .news-container ul li:last-child {
+section.greeting .news-container ul li:last-child {
   animation: news 5s ease-in-out alternate-reverse infinite;
 }
-main section.bg .news-container ul li .date {
+section.greeting .news-container ul li .date {
   opacity: 0.5;
   color: #1D2B3B;
 }
-main section.bg .news-container ul li .content {
+section.greeting .news-container ul li .content {
   width: 78%;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
-main section.bg .news-container .news-btn-group button {
+section.greeting .news-container .news-btn-group button {
   padding: 0;
   display: block;
   font-size: 14px;
   color: #1D2B3B;
   transform: rotate(-90deg);
 }
-main section.who-we-are {
+section.who-we-are {
   color: #fff;
   padding-bottom: 230px;
   background-color: #0b5092;
@@ -213,47 +214,48 @@ main section.who-we-are {
   background-size: 100% auto;
   background-position: bottom center;
 }
-main section.who-we-are .container-fluid {
+section.who-we-are .container-fluid {
   padding-left: calc((100% - 1200px) / 2);
   display: flex;
 }
-main section.who-we-are article {
+section.who-we-are article {
   padding-right: 10%;
 }
-main section.who-we-are article .title::before {
+section.who-we-are article .title::before {
   background-color: #fff;
 }
-main section.who-we-are article h3 {
+section.who-we-are article h3 {
   margin-top: 65px;
   font-size: 38px;
   line-height: 1.6;
 }
-main section.who-we-are article p {
+section.who-we-are article p {
   margin-top: 20px;
   margin-bottom: 42px;
   font-size: 17px;
   line-height: 2;
 }
-main section.who-we-are .img-container {
+section.who-we-are .img-container {
   width: 50%;
   flex-shrink: 0;
   display: flex;
   align-items: center;
 }
-main section.who-we-are .img-container .img {
+section.who-we-are .img-container .img {
   width: 33.3333%;
 }
-main section.who-we-are .img-container .img:nth-child(2) {
+section.who-we-are .img-container .img:nth-child(2) {
   margin-top: -80px;
 }
-main section.who-we-are .img-container .img:last-child {
+section.who-we-are .img-container .img:last-child {
   margin-top: 80px;
 }
-main section.our-business {
+section.our-business {
   position: relative;
   padding-top: 230px;
+  z-index: 4;
 }
-main section.our-business::after {
+section.our-business::after {
   content: "";
   position: absolute;
   top: 360px;
@@ -265,34 +267,34 @@ main section.our-business::after {
   background-image: url(./images/top_business_border.svg);
   background-position: top center;
 }
-main section.our-business .container {
+section.our-business .container {
   position: relative;
   z-index: 1;
 }
-main section.our-business .title {
+section.our-business .title {
   color: #0E5DA8;
 }
-main section.our-business .title::before {
+section.our-business .title::before {
   background-color: #0E5DA8;
 }
-main section.our-business .content-wrap {
+section.our-business .content-wrap {
   padding-top: 78px;
   width: calc(1200px + (100vw - 1200px) / 2);
   display: flex;
 }
-main section.our-business .content-wrap::after {
+section.our-business .content-wrap::after {
   clear: both;
 }
-main section.our-business .content-wrap .content {
+section.our-business .content-wrap .content {
   position: relative;
   width: 50%;
   height: 640px;
   overflow: hidden;
 }
-main section.our-business .content-wrap .content img {
+section.our-business .content-wrap .content img {
   transition: all 0.3s ease-in-out;
 }
-main section.our-business .content-wrap .content > div {
+section.our-business .content-wrap .content > div {
   position: absolute;
   left: 0;
   bottom: 30px;
@@ -302,88 +304,111 @@ main section.our-business .content-wrap .content > div {
   padding: 0 32px;
   color: #fff;
 }
-main section.our-business .content-wrap .content p {
+section.our-business .content-wrap .content p {
   font-size: 47px;
 }
-main section.our-business .content-wrap .content h3 {
+section.our-business .content-wrap .content h3 {
   margin-top: 16px;
   font-size: 16px;
 }
-main section.our-business .content-wrap .content:hover img {
+section.our-business .content-wrap .content:hover img {
   transform: scale(1.05);
 }
-main section.our-business .content-wrap .content:hover button.circle-btn {
+section.our-business .content-wrap .content:hover button.circle-btn {
   background-color: rgba(255, 255, 255, 0.15);
   transform: scale(1.1);
 }
-main section.our-business .content-wrap .content:hover button.circle-btn svg path {
+section.our-business .content-wrap .content:hover button.circle-btn svg path {
   stroke: #fff;
 }
-main section.service-and-technology {
+section.service-and-technology {
   position: relative;
   padding-top: 235px;
+  z-index: 3;
 }
-main section.service-and-technology::after {
+section.service-and-technology::after {
   content: "";
   position: absolute;
-  top: 200px;
+  top: -340px;
   left: 0;
   display: block;
   width: 100%;
-  height: 1124px;
+  height: 1200px;
   background-color: #F6F8FA;
 }
-main section.service-and-technology .container {
+section.service-and-technology .container {
   position: relative;
   z-index: 1;
 }
-main section.service-and-technology .title-wrapper {
+section.service-and-technology .title-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-main section.service-and-technology .title-wrapper .title {
+section.service-and-technology .title-wrapper .title {
   color: #0E5DA8;
 }
-main section.service-and-technology .title-wrapper .title::before {
+section.service-and-technology .title-wrapper .title::before {
   background-color: #0E5DA8;
 }
-main section.service-and-technology .title-wrapper button.read-more-btn {
+section.service-and-technology .title-wrapper button.read-more-btn {
   align-self: center;
 }
-main section.service-and-technology .title-wrapper button.read-more-btn:hover {
+section.service-and-technology .title-wrapper button.read-more-btn:hover {
   color: #0E5DA8;
   background-color: transparent;
   border: 1px solid #0E5DA8;
 }
-main section.service-and-technology .title-wrapper button.read-more-btn:hover::after {
+section.service-and-technology .title-wrapper button.read-more-btn:hover::after {
   background-color: #0E5DA8;
 }
-main section.service-and-technology .carousel {
+section.service-and-technology .carousel {
   margin-top: 78px;
   width: calc(1200px + (100vw - 1200px) / 2);
   overflow: hidden;
 }
-main section.service-and-technology .carousel ul {
+section.service-and-technology .carousel ul {
   display: flex;
 }
-main section.service-and-technology .carousel ul li.item {
+section.service-and-technology .carousel ul li.item {
   position: relative;
   flex-shrink: 0;
   width: 447px;
   margin-right: 50px;
 }
-main section.service-and-technology .carousel ul li.item img {
+section.service-and-technology .carousel ul li.item img {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-main section.service-and-technology .carousel ul li.item .item-content {
+section.service-and-technology .carousel ul li.item .item-content {
   position: absolute;
-  top: 0;
-  bottom: 0;
+  top: 40%;
+  left: 0;
+  right: 0;
   margin: auto;
+  width: 80%;
   color: #fff;
+  transition: all 0.4s ease;
+}
+section.service-and-technology .carousel ul li.item h3 {
+  font-size: 28px;
+  line-height: 1.5em;
+}
+section.service-and-technology .carousel ul li.item p {
+  font-size: 15px;
+  line-height: 1.73em;
+  opacity: 0;
+  transform: translateY(-70px);
+  transition: all 0.4s ease;
+}
+section.service-and-technology .carousel ul li.item:hover .item-content {
+  top: 35%;
+}
+section.service-and-technology .carousel ul li.item:hover p {
+  display: block;
+  opacity: 1;
+  transform: translate(0);
 }
 @-webkit-keyframes news {
   0% {
