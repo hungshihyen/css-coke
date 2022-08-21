@@ -402,6 +402,11 @@ section.service-and-technology .carousel ul li.item p {
   transform: translateY(-70px);
   transition: all 0.4s ease;
 }
+section.service-and-technology .carousel ul li.item button {
+  position: absolute;
+  left: 50px;
+  bottom: 50px;
+}
 section.service-and-technology .carousel ul li.item:hover .item-content {
   top: 35%;
 }
@@ -410,6 +415,39 @@ section.service-and-technology .carousel ul li.item:hover p {
   opacity: 1;
   transform: translate(0);
 }
+section.service-and-technology .carousel ul li.item:hover button {
+  background-color: transparent;
+  transform: scale(1.15);
+}
+section.service-and-technology .carousel ul li.item:hover button svg path {
+  stroke: #fff;
+}
+section.service-and-technology .progress-bar-wrapper {
+  margin-top: 35px;
+  display: flex;
+  align-items: center;
+}
+section.service-and-technology .progress-bar-wrapper .progress-bar-container {
+  margin-right: 15px;
+  height: 2px;
+  background-color: #E4E8EE;
+  flex-grow: 1;
+}
+section.service-and-technology .progress-bar-wrapper .progress-bar-container .progress-bar {
+  width: 50%;
+  height: 100%;
+  background-color: #0E5DA8;
+}
+section.service-and-technology .progress-bar-wrapper button.circle-btn {
+  border: 1px solid #E4E8EE;
+}
+section.service-and-technology .progress-bar-wrapper button.circle-btn:first-of-type {
+  margin-right: 5px;
+}
+section.service-and-technology .progress-bar-wrapper button.circle-btn:first-of-type svg {
+  transform: rotate(-180deg);
+}
+
 @-webkit-keyframes news {
   0% {
     opacity: 1;
@@ -418,6 +456,7 @@ section.service-and-technology .carousel ul li.item:hover p {
     opacity: 0;
   }
 }
+
 @keyframes news {
   0% {
     opacity: 1;
