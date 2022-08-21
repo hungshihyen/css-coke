@@ -16,6 +16,10 @@ button.circle-btn {
   transition: all 0.3s ease-in-out;
   border: 1px solid #fff;
 }
+button.circle-btn:disabled {
+  opacity: 0.5;
+  cursor: auto;
+}
 
 img {
   width: 100%;
@@ -446,6 +450,55 @@ section.service-and-technology .progress-bar-wrapper button.circle-btn:first-of-
 }
 section.service-and-technology .progress-bar-wrapper button.circle-btn:first-of-type svg {
   transform: rotate(-180deg);
+}
+section.achievements {
+  padding-top: 155px;
+}
+section.achievements .title-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+section.achievements .title-wrapper .title {
+  color: #0E5DA8;
+}
+section.achievements .title-wrapper .title::before {
+  background-color: #0E5DA8;
+}
+section.achievements .title-wrapper .title div {
+  color: rgba(14, 93, 168, 0.8);
+}
+section.achievements .title-wrapper button.read-more-btn {
+  background-color: #F2F5F8;
+}
+section.achievements .title-wrapper button.read-more-btn:hover {
+  color: #0E5DA8;
+  border: 1px solid #0E5DA8;
+  background-color: #fff;
+}
+section.achievements .title-wrapper button.read-more-btn:hover::after {
+  background-color: #0E5DA8;
+}
+section.achievements .content-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+section.achievements .content-wrapper > button {
+  padding: 25px 0;
+  width: 50%;
+  font-size: 18px;
+  color: #0E5DA8;
+  background-color: #F6F8FA;
+  order: 0;
+  transition: all 0.3s ease;
+}
+section.achievements .content-wrapper > button.active, section.achievements .content-wrapper > button:hover {
+  color: #fff;
+  background-color: #0E5DA8;
+}
+section.achievements .content-wrapper .content {
+  padding-top: 80px;
+  order: 1;
 }
 
 @-webkit-keyframes news {
