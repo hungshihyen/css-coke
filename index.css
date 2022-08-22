@@ -452,7 +452,7 @@ section.service-and-technology .progress-bar-wrapper button.circle-btn:first-of-
   transform: rotate(-180deg);
 }
 section.achievements {
-  padding-top: 155px;
+  padding: 155px 0 200px;
 }
 section.achievements .title-wrapper {
   display: flex;
@@ -468,16 +468,20 @@ section.achievements .title-wrapper .title::before {
 section.achievements .title-wrapper .title div {
   color: rgba(14, 93, 168, 0.8);
 }
-section.achievements .title-wrapper button.read-more-btn {
+section.achievements button.read-more-btn {
   background-color: #F2F5F8;
 }
-section.achievements .title-wrapper button.read-more-btn:hover {
+section.achievements button.read-more-btn:hover {
   color: #0E5DA8;
   border: 1px solid #0E5DA8;
   background-color: #fff;
 }
-section.achievements .title-wrapper button.read-more-btn:hover::after {
+section.achievements button.read-more-btn:hover::after {
   background-color: #0E5DA8;
+}
+section.achievements button.read-more-btn:last-child {
+  display: block;
+  margin: 50px auto 0;
 }
 section.achievements .content-wrapper {
   display: flex;
@@ -495,6 +499,9 @@ section.achievements .content-wrapper > button {
 section.achievements .content-wrapper > button.active, section.achievements .content-wrapper > button:hover {
   color: #fff;
   background-color: #0E5DA8;
+}
+section.achievements .content-wrapper > button:not(.active) + div.content {
+  display: none;
 }
 section.achievements .content-wrapper .content {
   padding-top: 80px;
