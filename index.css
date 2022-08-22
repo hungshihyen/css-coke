@@ -504,6 +504,7 @@ section.achievements .content-wrapper .content {
 section.achievements .content-wrapper .menu {
   position: relative;
   width: 220px;
+  flex-shrink: 0;
 }
 section.achievements .content-wrapper .menu .btn-all {
   padding: 8px 15px;
@@ -557,7 +558,62 @@ section.achievements .content-wrapper .menu ul li a {
 }
 section.achievements .content-wrapper .item-container {
   margin-left: 50px;
+  display: flex;
+  flex-wrap: wrap;
   flex-grow: 1;
+}
+section.achievements .content-wrapper .item-container .item {
+  margin-bottom: 45px;
+  width: 47.5%;
+  text-decoration: none;
+  color: #000;
+}
+section.achievements .content-wrapper .item-container .item:nth-child(odd) {
+  margin-right: 5%;
+}
+section.achievements .content-wrapper .item-container .item:hover img {
+  transform: scale(1.15);
+}
+section.achievements .content-wrapper .item-container .item .img {
+  width: 100%;
+  height: 272px;
+  overflow: hidden;
+}
+section.achievements .content-wrapper .item-container .item .img img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 0.3s ease;
+}
+section.achievements .content-wrapper .item-container .item .labels {
+  margin-top: 18px;
+  display: flex;
+  align-items: center;
+}
+section.achievements .content-wrapper .item-container .item .labels .date {
+  margin-right: 10px;
+  font-size: 15px;
+  color: rgba(29, 43, 59, 0.6);
+}
+section.achievements .content-wrapper .item-container .item .labels ul {
+  display: flex;
+}
+section.achievements .content-wrapper .item-container .item .labels ul li {
+  padding: 8px 12px;
+  margin: 0 3px;
+  background-color: #F2F5F8;
+  font-size: 14px;
+  color: rgba(29, 43, 59, 0.5);
+  border-radius: 18px;
+}
+section.achievements .content-wrapper .item-container .item h3 {
+  margin-top: 15px;
+  font-size: 20px;
+  line-height: 1.5;
+  color: #005DB0;
+}
+section.achievements .content-wrapper .item-container .item p {
+  margin-top: 5px;
 }
 
 @-webkit-keyframes news {
