@@ -8,6 +8,10 @@ button {
     cursor: pointer;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
 
 
 button.circle-btn {
@@ -30,6 +34,7 @@ img {
 }
 
 .container {
+    display: block;
     width: 1200px;
     margin: 0 auto;
 
@@ -55,7 +60,7 @@ h2.title {
         background-color: #fff;
     }
 
-    div {
+    div:last-child {
         font-size: 20px;
     }
 }
@@ -568,7 +573,7 @@ section {
             }
         }
 
-        button.read-more-btn {
+        .read-more-btn {
             background-color: #F2F5F8;
 
             &:hover {
@@ -581,7 +586,7 @@ section {
                 }
             }
 
-            &:last-child {
+            &.achievement-read-more-btn {
                 display: block;
                 margin: 50px auto 0;
             }
@@ -761,6 +766,244 @@ section {
 
 
         }
+    }
+
+    &.recruit {
+        position: relative;
+        padding: 190px 0 165px;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            background-repeat: no-repeat;
+            background-image: url('./images/top_recruit_bg.jpg');
+            background-size: 100% auto;
+        }
+
+        .container {
+            position: relative;
+            color: #fff;
+            z-index: 2;
+        }
+
+        .title {
+            &::before {
+                background-color: #fff;
+            }
+        }
+
+        p {
+            margin-top: 32px;
+            width: 35%;
+            font-size: 16px;
+            line-height: 1.87;
+        }
+
+        button {
+            margin-top: 50px;
+        }
+    }
+
+    &.info {
+        padding-top: 195px;
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .title {
+            color: #0E5DA8;
+
+            &::before {
+                background-color: #0E5DA8;
+            }
+        }
+
+        article {
+            width: 45%;
+        }
+
+        ul {
+            li {
+                margin-top: 32px;
+
+                a {
+                    display: flex;
+                    flex-direction: column;
+
+                    h3 {
+                        font-size: 16px;
+                        line-height: 1.875;
+                        order: 1;
+                    }
+
+                    div {
+                        margin-bottom: 15px;
+                        display: flex;
+                        align-items: center;
+                        order: 0;
+
+                        .date {
+                            color: rgba(29, 43, 59, 0.6);
+                            font-size: 15px;
+                        }
+
+                        .media-label {
+                            padding: 5px 10px;
+                            margin-left: 10px;
+                            font-size: 14px;
+                            font-weight: 500;
+                            color: #0E5DA8;
+                            border: 1px #E4E8EE solid;
+                            border-radius: 13px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .read-more-wrapper {
+            margin-top: 50px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            flex-shrink: 0;
+
+            &::before {
+                content: '';
+                flex-grow: 1;
+                height: 2px;
+                background-color: rgba(29, 43, 59, 0.08);
+            }
+
+            .read-more-btn {
+                margin-left: 25px;
+                background-color: #F2F5F8;
+
+                &:hover {
+                    color: #0E5DA8;
+                    border-color: #0E5DA8;
+                    background-color: #fff;
+
+                    &::after {
+                        background-color: #0E5DA8;
+                    }
+                }
+            }
+        }
+    }
+
+    &.carbon {
+        position: relative;
+        padding: 220px 0 90px;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            background-image: url('./images/top_carbon_bg.png');
+            background-position: center 220px;
+        }
+
+        .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .title {
+            color: #73BC5D;
+
+            &::before {
+                background-color: #73BC5D;
+            }
+        }
+
+        article {
+            margin-top: 240px;
+            width: 40%;
+            color: #fff;
+
+            h3 {
+                font-size: 30px;
+                line-height: 1.8;
+            }
+
+            p {
+                margin-top: 28px;
+                font-size: 17px;
+                line-height: 2;
+            }
+        }
+
+        .read-more-btn {
+            margin-top: 50px;
+        }
+    }
+
+    &.contact {
+        padding: 114px 0;
+        background: radial-gradient(circle at top left, #2A67AB, #0E5DA8 90%, #0E5DA8 100%);
+        color: #fff;
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .title {
+            font-size: 19px;
+
+            &::before {
+                width: 6px;
+                height: 6px;
+                top: 10px;
+            }
+        }
+
+        h3 {
+            margin: 20px 0 30px;
+            font-size: 34px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.875;
+        }
+
+        &:hover {
+            .circle-btn {
+                background-color: transparent;
+                transform: scale(1.2);
+
+                svg path {
+                    stroke: #fff;
+                }
+            }
+        }
+
+    }
+}
+
+footer {
+    padding: 130px 0 160px;
+    background-color: #1D2B3B;
+
+    .container {
+        display: flex;
     }
 }
 
